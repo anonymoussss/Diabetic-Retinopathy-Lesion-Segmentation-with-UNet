@@ -3,7 +3,7 @@ import random
 from six.moves import cPickle as pickle
 from tensorflow.python.platform import gfile
 import glob
-
+import platform
 
 
 
@@ -23,7 +23,6 @@ def read_dataset(data_dir):
         training_records = result['training']
         validation_records = result['validation']
         del result
-
     return training_records, validation_records
 
 
@@ -42,7 +41,10 @@ def create_image_lists(image_dir):
             print('No files found')
         else:
             for f in file_list:
-                filename = os.path.splitext(f.split("/")[-1])[0]+'_EX' #windows->\\,linux->/
+                if(platform.system()=='Windows'):
+                    filename = os.path.splitext(f.split("\\")[-1])[0]+'_EX' #windows->\\,linux->/
+                else:
+                    filename = os.path.splitext(f.split("/")[-1])[0]+'_EX' #windows->\\,linux->/
                 annotation_file = os.path.join(image_dir, "annotations", directory, filename + '.tif')
                 if os.path.exists(annotation_file):
                     record = {'image': f, 'annotation': annotation_file, 'filename': filename}
@@ -58,4 +60,4 @@ def create_image_lists(image_dir):
     return image_list
 
 
-#create_image_lists('Data/')
+#read_dataset('Data/')

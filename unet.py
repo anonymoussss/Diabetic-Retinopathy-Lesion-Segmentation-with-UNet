@@ -43,7 +43,6 @@ range_threshold = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
 FLAGS = tf.flags.FLAGS
 tf.flags.DEFINE_string('mode', "train", "Mode train/ test/ visualize")
 
-data_dir = "Data/"
 class Unet:
     def __init__(self, img_rows = IMG_SIZE, img_cols = IMG_SIZE):
         self.img_rows = img_rows
