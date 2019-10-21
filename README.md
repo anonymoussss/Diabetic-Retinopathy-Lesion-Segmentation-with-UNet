@@ -13,7 +13,7 @@
 
  Diabetic Retinopathy is referred as a clinical diagnosis, depicted by the presence (see Fig.) of one or more several retinal lesions like microaneurysms (MA), hemorrhages (HE), hard exudates (EX), and soft exudates (SE). 
 
-![](assets\1.png)
+![Diabetic Retinopathy](https://github.com/anonymoussss/IDRiD_sub1_EX/blob/master/assets/1.png?raw=true)
 
 
 
@@ -58,7 +58,7 @@ In this repository, I just use the "EX" class for simplicity, actually  I use on
 
 The data needs to go to the competition website to download ( https://idrid.grand-challenge.org/Data_Download/ ),  I just show one sample for example, the left one is the original image, the right one is the corresponding groud truth.
 
-![](assets\2.png)
+![data](https://github.com/anonymoussss/IDRiD_sub1_EX/blob/master/assets/2.png?raw=true)
 
  **Result Submission** 
 
@@ -88,15 +88,15 @@ the model effect  will be shown at each epoch by tensorboard , including the tra
 
 **pixel auccurcy**
 
-![pixel auccurcy](assets\3.png)
+![pixel auccurcy](https://github.com/anonymoussss/IDRiD_sub1_EX/blob/master/assets/3.png?raw=true)
 
 **AUPR on test datasets** 
 
-![AUPR on test datasets ](assets\4.png)
+![AUPR on test datasets ](https://github.com/anonymoussss/IDRiD_sub1_EX/blob/master/assets/4.png?raw=true)
 
 **from left to right: original image, gt image, prediction image** 
 
-![prediction comparation](assets\5.png)
+![prediction comparation](https://github.com/anonymoussss/IDRiD_sub1_EX/blob/master/assets/5.png?raw=true)
 
 
 
