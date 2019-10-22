@@ -25,15 +25,14 @@ class BatchDatset:
         """
         print("Initializing Batch Dataset Reader...")
         print(image_options)
+        self.__channels = True #require gray immages
         self.files = records_list
         self.image_options = image_options
         self._read_images()
 
     def _read_images(self):
-        self.__channels = True #require gray immages
         self.images = np.array([self._transform(filename['image']) for filename in self.files])
         #self.images = np.expand_dims(self.images, 3)
-        self.__channels = True
         self.annotations = np.array([self._transform(filename['annotation']) for filename in self.files])
         self.annotations = np.expand_dims(self.annotations, 3)
         print ('self.images.shape:',self.images.shape)
