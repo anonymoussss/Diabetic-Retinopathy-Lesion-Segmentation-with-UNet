@@ -35,7 +35,7 @@ def create_image_lists(image_dir):
     for directory in directories:
         file_list = []
         image_list[directory] = []
-        file_glob = os.path.join(image_dir, "images", directory, '*.' + 'jpg')
+        file_glob = os.path.join(image_dir, "images", directory, '*.tif')
         file_list.extend(glob.glob(file_glob))
         if not file_list:
             print('No files found')
