@@ -74,9 +74,7 @@ The data needs to go to the competition website to download ( https://idrid.gran
 
 ## Train
 
-- first of all, change your label images to 0-1 binary mask (eg. 0 for background and 1 for foreground)
-
-- then just run
+just run
 
 ```
 python unet.py
